@@ -21,7 +21,7 @@ The software can be easily compiled
 sudo apt install libeigen3-dev libgsl-dev
 
 ## Linux command for compilation 
-g++  HydroCorrections.cpp BrSimulator.cpp  -o BrownianBead `pkg-config --cflags --libs eigen3` -lgsl -O3
+g++  HydroCorrections.cpp BrSimulator.cpp  -o BrownianBead \`pkg-config --cflags --libs eigen3\` -lgsl -O3
 
 ## Stand-alone output
 The stand-alone function has been written for debug purposes. 
