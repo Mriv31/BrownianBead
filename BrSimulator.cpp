@@ -246,19 +246,15 @@ int BrSimulator::compute_coupling_matrices()
 }
 
 int main () {
+  int n = 0; // contains size of simulation
 
-  Eigen::Vector3d omegac,pole;
-omegac << 1,2,3;
-pole << 0,1,0;
-omegac.cross(pole);
-// std::cout << omegac << omegac.cross(pole) << std::endl;
+ float *x = NULL, *y = NULL, *z = NULL;
  BrSimulator B(500,10,1.57,0.1,1e-8,0,25200,1,0);
-for (int i = 0;i<10;i++)
-{
-B.iterate();
-B.iterate();
-B.iterate();
-}
+ while (B.iterate() == 0)
+ {
+ ;
+ }
+ n = B.export_simulation(&x,&y,&z);
 // while (B.iterate() == 0)
 // {
 // ;
